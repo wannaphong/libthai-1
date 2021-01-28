@@ -16,9 +16,7 @@ jobs:
     - name: install build-essential
       run: sudo apt-get install build-essential
     - name: install libtool
-      run: sudo apt-get install m4 automake libtool autoconf-archive
-    - name: autoreconf
-      run: autoreconf -i
+      run: sudo apt-get install m4 automake libtool autoconf-archive libdatrie
     - name: autogen
       run: ./autogen.sh
     - name: configure
