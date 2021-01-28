@@ -13,16 +13,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: go to root
-      run: sudo su
     - name: install build-essential
-      run: apt-get install build-essential
+      run: sudo apt-get install build-essential
     - name: install libtool
-      run: apt-get install m4 automake libtool autoconf-archive
+      run: sudo apt-get install m4 automake libtool autoconf-archive
     - name: autogen
-      run: ./autogen.sh
+      run: sudo ./autogen.sh
     - name: configure
-      run: ./configure
+      run: sudo ./configure
     - name: make
       run: make
     - name: make check
