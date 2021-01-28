@@ -17,10 +17,12 @@ jobs:
       run: sudo apt-get install build-essential
     - name: install libtool
       run: sudo apt-get install m4 automake libtool autoconf-archive
+    - name: autoreconf
+      run: autoreconf -i
     - name: autogen
-      run: sudo ./autogen.sh
+      run: ./autogen.sh
     - name: configure
-      run: sudo ./configure
+      run: ./configure
     - name: make
       run: make
     - name: make check
