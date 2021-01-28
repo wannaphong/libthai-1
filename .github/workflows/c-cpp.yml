@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install libtool
-      run: apt-get install libtool
+      run: sudo apt-get install libtool
     - name: autogen
       run: ./autogen.sh
     - name: configure
