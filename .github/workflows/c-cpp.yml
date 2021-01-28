@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install build-essential
-      run: sudo apt-get install build-essential
+      run: sudo apt-get install build-essential autoconf autogen
     - name: install libtool
       run: sudo apt-get install libtool m4 make g++ autoconf libdatrie-dev
     - name: autogen
